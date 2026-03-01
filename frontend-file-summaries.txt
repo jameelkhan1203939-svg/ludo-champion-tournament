@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Root application component that renders the TournamentLanding page as the sole view.",
+  "frontend/src/pages/TournamentLanding.tsx": "Main tournament landing page that composes all section components (header, banner, details card, rules card, register button, footer) in a full-height flex layout.",
+  "frontend/src/components/TournamentHeader.tsx": "Vibrant crimson-red header with decorative dice/target emojis, bold Oswald display font title \"🏆 Ludo Champion Tournament 🏆\", and gold tagline \"Become the King of Ludo!\".",
+  "frontend/src/components/TournamentBanner.tsx": "Responsive hero banner component that renders the generated tournament banner image from /assets/generated with full-width display and max-height constraint.",
+  "frontend/src/components/TournamentDetailsCard.tsx": "White card with red header showing four tournament details (date, time, entry fee, prize) in a 2×2 grid with emoji icons, bold values, and hover effects.",
+  "frontend/src/components/RulesCard.tsx": "White card with dark header listing three tournament rules as a numbered list with emoji icons, red numbered badges, and hover row effects.",
+  "frontend/src/components/RegisterButton.tsx": "Green \"Register Now!\" CTA button with shimmer animation that now opens the RegistrationModal on click instead of navigating to WhatsApp; all existing button styling is preserved.",
+  "frontend/src/components/TournamentFooter.tsx": "Fixed bottom footer with dark background showing copyright notice and caffeine.ai attribution with UTM tracking and tournament-themed styling.",
+  "frontend/src/index.css": "Global styles with Google Fonts import (Oswald + Inter), OKLCH tournament color system (crimson red, emerald green, warm gold), and utility classes for card shadows and shimmer animation.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with Oswald/Inter font families, tournament-specific color tokens (tournament-red, tournament-green, tournament-gold, tournament-bg), custom border radii, and shimmer keyframe animation.",
+  "frontend/src/components/RegistrationModal.tsx": "New modal component using shadcn Dialog that renders a registration form with Name and Phone Number fields, calls the backend `register()` method on submit, and shows success or error feedback states with inline loading spinner."
+}

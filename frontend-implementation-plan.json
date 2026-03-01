@@ -1,0 +1,31 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Enable registration with a backend form",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Replace WhatsApp link with modal registration form that collects name and phone number and submits to backend",
+      "acceptanceCriteria": [
+        "Clicking 'Register Now!' opens a modal with Name and Phone Number input fields.",
+        "Submitting the form calls the backend register() method.",
+        "On success, the modal shows a confirmation message such as 'Registration successful! 🎉'.",
+        "On error (e.g., duplicate phone), an appropriate error message is shown inside the modal.",
+        "The modal can be closed without submitting.",
+        "The Register Now button retains its existing active shimmer and animation styling."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RegistrationModal.tsx",
+          "operation": "create",
+          "description": "Create a modal component that renders a registration form with Name and Phone Number input fields, submit and cancel buttons, and displays success or error messages. Use shadcn-ui Dialog component for the modal container. The modal accepts isOpen and onClose props to control visibility. On form submission, call the backend register() method via useActor hook, handle success by showing 'Registration successful! 🎉' message, and handle errors by displaying the error message. Include form validation for required fields and phone number format."
+        },
+        {
+          "path": "frontend/src/components/RegisterButton.tsx",
+          "operation": "modify",
+          "description": "Replace the WhatsApp link navigation with modal trigger logic. Add state to control the RegistrationModal visibility. When the button is clicked, open the RegistrationModal instead of navigating to WhatsApp. Import and render the RegistrationModal component with appropriate props. Preserve all existing button styling including shimmer animation, hover/active scale effects, and the active visual state."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Ludo Champion Tournament website - a Hindi-language tournament registration page showing event details (date, time, entry fee, prize), rules, and a registration button linking to a Google Form.",
+  "architectural_notes": [
+    "Static HTML page with inline CSS, no JavaScript framework",
+    "Language: Hindi (lang='hi'), targeting Indian audience",
+    "Registration links to an external Google Form"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-tournament-landing-page-displaying-the-event-details-date-15-march-2026-time-06-00-pm-ist-entry-fee-50-and-winner-prize-1000-in-a-visually-distinct-card",
+      "title": "Create a tournament landing page displaying the event details: Date (15 March 2026), Time (06:00 PM IST), Entry Fee (₹50), and Winner Prize (₹1000) in a visually distinct card.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-rules-section-listing-the-three-tournament-rules-1-all-matches-will-be-played-on-the-ludo-king-app-2-the-winner-must-submit-a-screenshot-of-the-game-result-3-players-not-present-on-time-will-be-disqualified",
+      "title": "Display a Rules section listing the three tournament rules: (1) All matches will be played on the Ludo King App, (2) The winner must submit a screenshot of the game result, (3) Players not present on time will be disqualified.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-prominent-register-now-call-to-action-button-since-no-valid-google-form-url-is-available-display-the-button-in-an-active-state-but-show-a-tooltip-or-note-indicating-the-registration-link-will-be-available-soon",
+      "title": "Add a prominent 'Register Now!' call-to-action button. Since no valid Google Form URL is available, display the button in an active state but show a tooltip or note indicating the registration link will be available soon.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-a-header-with-the-tournament-title-ludo-champion-tournament-and-tagline-become-the-king-of-ludo-and-a-footer-with-2026-ludo-champions",
+      "title": "Include a header with the tournament title '🏆 Ludo Champion Tournament 🏆' and tagline 'Become the King of Ludo!', and a footer with '© 2026 Ludo Champions'.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-vibrant-game-tournament-visual-theme-bold-reds-and-greens-as-primary-colors-clean-card-based-layout-with-rounded-corners-and-subtle-shadows-energetic-typography-and-consistent-use-of-emoji-icons-for-tournament-details-the-design-should-evoke-excitement-and-competition",
+      "title": "Apply a vibrant, game-tournament visual theme: bold reds and greens as primary colors, clean card-based layout with rounded corners and subtle shadows, energetic typography, and consistent use of emoji icons for tournament details. The design should evoke excitement and competition.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-display-a-tournament-banner-image-as-the-page-hero-featuring-a-ludo-board-game-theme-with-a-trophy-dice-and-bold-championship-text-and-use-it-as-a-visual-header-banner-at-the-top-of-the-page-rendered-from-frontend-public-assets-generated",
+      "title": "Generate and display a tournament banner image as the page hero, featuring a Ludo board game theme with a trophy, dice, and bold championship text, and use it as a visual header banner at the top of the page rendered from frontend/public/assets/generated.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-register-now-button-in-registerbutton-tsx-to-be-fully-enabled-and-active-remove-the-disabled-state-and-coming-soon-notice-the-button-should-be-clickable-and-visually-indicate-it-is-active-and-ready-for-registration",
+      "title": "Update the 'Register Now!' button in RegisterButton.tsx to be fully enabled and active (remove the disabled state and 'coming soon' notice). The button should be clickable and visually indicate it is active and ready for registration.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-current-whatsapp-link-in-registerbutton-tsx-with-a-modal-registration-form-that-collects-the-player-s-name-and-phone-number-and-submits-them-to-the-backend-register-method-show-a-success-message-on-successful-registration-and-an-error-message-on-failure",
+      "title": "Replace the current WhatsApp link in RegisterButton.tsx with a modal registration form that collects the player's name and phone number and submits them to the backend register() method. Show a success message on successful registration and an error message on failure.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add a backend registration system that accepts player name and phone number, stores registrations in stable memory, and exposes a register() update method and a getRegistrations() query method.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Ludo Champion Tournament",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

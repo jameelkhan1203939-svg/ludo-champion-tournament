@@ -1,0 +1,61 @@
+{
+  "kind": "build_request",
+  "title": "Enable registration with a backend form",
+  "projectName": "Ludo Champion Tournament",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Add a backend registration system that accepts player name and phone number, stores registrations in stable memory, and exposes a register() update method and a getRegistrations() query method.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Registeretion chalu karo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A register(name: Text, phone: Text) update method exists and persists the entry in stable storage.",
+        "A getRegistrations() query method returns all registered entries.",
+        "Duplicate phone numbers are rejected with an error message."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Replace the current WhatsApp link in RegisterButton.tsx with a modal registration form that collects the player's name and phone number and submits them to the backend register() method. Show a success message on successful registration and an error message on failure.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Registeretion chalu karo"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking 'Register Now!' opens a modal with Name and Phone Number input fields.",
+        "Submitting the form calls the backend register() method.",
+        "On success, the modal shows a confirmation message such as 'Registration successful! 🎉'.",
+        "On error (e.g., duplicate phone), an appropriate error message is shown inside the modal.",
+        "The modal can be closed without submitting.",
+        "The Register Now button retains its existing active shimmer and animation styling."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files in frontend/src/hooks/ (immutable paths).",
+    "Do not modify frontend/src/components/ui/ (immutable paths).",
+    "Keep all Motoko logic in backend/main.mo (single-actor architecture)."
+  ],
+  "nonGoals": [
+    "Connecting registrations to Google Sheets or any external service.",
+    "Email or SMS notifications for registrations.",
+    "An admin dashboard to view registrations beyond the backend query method."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

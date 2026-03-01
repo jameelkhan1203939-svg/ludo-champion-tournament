@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Tournament color palette */
+    --tournament-red-l: 0.55;
+    --tournament-red-c: 0.22;
+    --tournament-red-h: 25;
+
+    --tournament-green-l: 0.52;
+    --tournament-green-c: 0.18;
+    --tournament-green-h: 145;
+
+    --tournament-gold-l: 0.78;
+    --tournament-gold-c: 0.16;
+    --tournament-gold-h: 75;
+
+    /* Semantic tokens - light mode */
+    --background: 0.97 0.005 60;
+    --foreground: 0.18 0.01 260;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.01 260;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.01 260;
+    --primary: 0.55 0.22 25;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.95 0.01 60;
+    --secondary-foreground: 0.18 0.01 260;
+    --muted: 0.94 0.01 60;
+    --muted-foreground: 0.5 0.01 260;
+    --accent: 0.78 0.16 75;
+    --accent-foreground: 0.18 0.01 260;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.01 60;
+    --input: 0.88 0.01 60;
+    --ring: 0.55 0.22 25;
+    --chart-1: 0.55 0.22 25;
+    --chart-2: 0.52 0.18 145;
+    --chart-3: 0.78 0.16 75;
+    --chart-4: 0.5 0.15 260;
+    --chart-5: 0.65 0.2 200;
+    --sidebar: 0.97 0.005 60;
+    --sidebar-foreground: 0.18 0.01 260;
+    --sidebar-primary: 0.55 0.22 25;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.94 0.01 60;
+    --sidebar-accent-foreground: 0.18 0.01 260;
+    --sidebar-border: 0.88 0.01 60;
+    --sidebar-ring: 0.55 0.22 25;
+  }
+
+  .dark {
+    --background: 0.14 0.01 260;
+    --foreground: 0.96 0.005 60;
+    --card: 0.2 0.01 260;
+    --card-foreground: 0.96 0.005 60;
+    --popover: 0.22 0.01 260;
+    --popover-foreground: 0.96 0.005 60;
+    --primary: 0.62 0.22 25;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.25 0.01 260;
+    --secondary-foreground: 0.96 0.005 60;
+    --muted: 0.25 0.01 260;
+    --muted-foreground: 0.65 0.01 260;
+    --accent: 0.78 0.16 75;
+    --accent-foreground: 0.14 0.01 260;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 1 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.62 0.22 25;
+    --chart-1: 0.62 0.22 25;
+    --chart-2: 0.58 0.18 145;
+    --chart-3: 0.78 0.16 75;
+    --chart-4: 0.55 0.15 260;
+    --chart-5: 0.65 0.2 200;
+    --sidebar: 0.2 0.01 260;
+    --sidebar-foreground: 0.96 0.005 60;
+    --sidebar-primary: 0.62 0.22 25;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.25 0.01 260;
+    --sidebar-accent-foreground: 0.96 0.005 60;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.62 0.22 25;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.12), 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-cta {
+    box-shadow: 0 6px 24px -4px rgba(34, 139, 34, 0.5), 0 2px 8px -2px rgba(34, 139, 34, 0.3);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}

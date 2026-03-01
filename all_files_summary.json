@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko actor that stores player registrations (name + phone) in a list, exposes a `register` method enforcing 8-digit phone numbers, and a `getRegistrations` query to retrieve all entries.",
+  "feature_evidence.json": "Feature evidence report linking the WhatsApp-to-modal registration form feature to its implementing files (RegisterButton.tsx and RegistrationModal.tsx) and test ID REQ-10.",
+  "frontend-file-summaries.txt": "JSON map of frontend source files to short human-readable summaries describing each component's purpose and styling.",
+  "frontend/index.css": "Global Tailwind CSS entry point defining OKLCH-based CSS custom properties for light and dark themes including colors, borders, and sidebar tokens.",
+  "frontend/index.html": "Minimal HTML shell for the Ludo Champion Tournament app that mounts the React root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that renders only the TournamentLanding page.",
+  "frontend/src/components/RegisterButton.tsx": "Styled green CTA button with shimmer animation that opens the RegistrationModal on click using local boolean state.",
+  "frontend/src/components/RegistrationModal.tsx": "shadcn Dialog-based modal with name and phone fields that validates input, calls the backend `register()` method, and displays success or error feedback with a loading spinner.",
+  "frontend/src/components/RulesCard.tsx": "Card component with a dark header that renders three tournament rules as a numbered list with emoji icons and hover effects.",
+  "frontend/src/components/TournamentBanner.tsx": "Full-width responsive image component that displays the generated Ludo tournament banner with a max height of 400px.",
+  "frontend/src/components/TournamentDetailsCard.tsx": "Card with a red header showing four tournament details (date, time, entry fee, prize) in a responsive 2×2 grid with emoji icons and hover effects.",
+  "frontend/src/components/TournamentFooter.tsx": "Fixed bottom footer displaying copyright and a caffeine.ai attribution link with UTM tracking parameters.",
+  "frontend/src/components/TournamentHeader.tsx": "Crimson-red header with decorative dice/target emojis, bold Oswald-font tournament title, and a gold tagline.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches an ICP backend actor via React Query, using the current Internet Identity if authenticated or an anonymous actor otherwise, and invalidates dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication on ICP, managing login/logout state, identity persistence, and AuthClient creation with configurable options.",
+  "frontend/src/index.css": "Global stylesheet importing Google Fonts and Tailwind directives, defining CSS custom properties for a tournament-themed color palette in both light and dark modes.",
+  "frontend/src/main.tsx": "Application entry point that renders the React app wrapped with QueryClientProvider and InternetIdentityProvider into the root DOM element.",
+  "frontend/src/pages/TournamentLanding.tsx": "Landing page component that composes the tournament UI from header, banner, details card, rules card, register button, and footer components.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with tournament-specific colors (oklch), custom fonts (Oswald/Inter), border radii, box shadows, and enabling dark mode via class strategy.",
+  "project_state.json": "Tracks the project's current state at version 9, documenting the Ludo Champion Tournament site's existing features, architectural notes, and known issues for build planning."
+}
